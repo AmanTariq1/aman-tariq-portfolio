@@ -13,7 +13,6 @@ I love building clean, efficient, and user-centric web applications. My core too
 
 - **Frontend:** React.js, Next.js, HTML5, CSS3/Tailwind
 - **Backend:** Node.js, REST APIs
-- **Databases:** MongoDB, Firebase
 - **AI & Tools:** LLMs, RAG, Git/GitHub, Figma
 
 ## 📂 Featured Projects
