@@ -1,6 +1,3 @@
-
-# aman-tariq-portfolio
-Personal Portfolio website built with React.js and CSS3/Tailwind. Showcasing my projects, skills in AI/ML, and web development journey as a Software Engineering student.
 # Aman Tariq | Professional Portfolio
 
 Welcome to my personal portfolio repository! This project showcases my journey as a Software Engineering student, my technical skills, and the projects I've built.
