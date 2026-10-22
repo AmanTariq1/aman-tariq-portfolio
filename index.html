@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Portfolio - Developer & Designer">
-  <title>Aman Tariq | Creative Developer</title>
+  <meta name="description" content="Aman Tariq - Software Engineering Student & Full-Stack Developer Portfolio">
+  <title>Aman Tariq | Software Engineer & AI Developer</title>
   
   <!-- Premium Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- Devicon for Official Tech Logos -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Devicon for Official Tech Logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    
-    
     /* ================= VARIABLES ================= */
     :root {
       --bg: #0a0a0f;
@@ -42,14 +43,15 @@
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
-      cursor: none; /* Custom cursor */
+      cursor: none;
     }
-    @media (pointer: coarse) { body { cursor: auto; } } /* Disable on mobile */
+    @media (pointer: coarse) { body { cursor: auto; } }
 
     a { text-decoration: none; color: inherit; position: relative; }
     img { max-width: 100%; display: block; }
     section { padding: 6rem 2rem; position: relative; }
     .container { max-width: 1280px; margin: 0 auto; }
+    
     .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
       padding: 0.9rem 1.8rem;
@@ -85,7 +87,14 @@
     }
 
     /* ================= CUSTOM CURSOR ================= */
-    .cursor { width: var(--cursor-size); height: var(--cursor-size); border: 2px solid var(--accent); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: width 0.2s, height 0.2s, background 0.2s; mix-blend-mode: difference; }
+    .cursor { 
+      width: var(--cursor-size); height: var(--cursor-size); 
+      border: 2px solid var(--accent); border-radius: 50%; 
+      position: fixed; pointer-events: none; z-index: 9998; 
+      transform: translate(-50%, -50%); 
+      transition: width 0.2s, height 0.2s, background 0.2s; 
+      mix-blend-mode: difference; 
+    }
     .cursor.hover { width: 40px; height: 40px; background: rgba(6, 182, 212, 0.2); border-color: var(--primary); }
     @media (pointer: coarse) { .cursor { display: none; } }
 
@@ -116,17 +125,15 @@
     .menu-btn { display: none; font-size: 1.4rem; cursor: pointer; color: white; }
 
     /* ================= HERO ================= */
-    
     #hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-top: 80px; /* Account for fixed header */
+      padding-top: 80px;
     }
 
-    /* Background Glow Effects */
     .hero-glow {
       position: absolute;
       top: 20%;
@@ -155,7 +162,6 @@
       100% { transform: scale(1.2); opacity: 0.9; }
     }
 
-    /* Floating Background Icons */
     .floating-shape {
       position: absolute;
       font-size: 2.5rem;
@@ -172,7 +178,6 @@
       50% { transform: translateY(-20px) rotate(10deg); }
     }
 
-    /* Layout */
     .hero-container {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -181,7 +186,6 @@
       width: 100%;
     }
 
-    /* Text Content */
     .hero-greeting {
       color: var(--accent);
       font-weight: 600;
@@ -211,7 +215,7 @@
       color: var(--primary);
       font-weight: 700;
     }
-    .cursor {
+    .typing-cursor {
       display: inline-block;
       width: 3px;
       background-color: var(--primary);
@@ -228,21 +232,13 @@
       margin-bottom: 2.5rem;
     }
 
-    /* Buttons & Socials */
-    .hero-.btns {
-  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
-}
-.btn:hover {
-  box-shadow: 0 10px 35px rgba(6, 182, 212, 0.6);
-}
-.btn-outline {
-  border-color: rgba(6, 182, 212, 0.6);
-  color: #06b6d4;
-}
-.btn-outline::after {
-  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
-}
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    
     .hero-socials {
       display: flex;
       gap: 1.2rem;
@@ -264,7 +260,6 @@
       box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
     }
 
-    /* Hero Image Section */
     .hero-image {
       display: flex;
       justify-content: center;
@@ -294,7 +289,6 @@
       box-shadow: 0 0 60px rgba(99, 102, 241, 0.5);
     }
     
-    /* Rotating Orbit Ring */
     .orbit-ring {
       position: absolute;
       top: -5%; left: -5%; right: -5%; bottom: -5%;
@@ -313,7 +307,6 @@
     }
     @keyframes spin { 100% { transform: rotate(360deg); } }
 
-    /* Mobile Responsive */
     @media (max-width: 900px) {
       .hero-container { grid-template-columns: 1fr; text-align: center; }
       .hero-content { order: 2; }
@@ -325,8 +318,7 @@
       .hero-title { font-size: 1.4rem; }
     }
 
-    /* ================= ABOUT SECTION PRO STYLES ================= */
-    
+    /* ================= ABOUT SECTION ================= */
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1.2fr;
@@ -334,7 +326,6 @@
       align-items: center;
     }
 
-    /* Image Wrapper & Hover Effects */
     .about-img-wrapper {
       position: relative;
       max-width: 500px;
@@ -365,7 +356,6 @@
       filter: grayscale(0%);
     }
 
-    /* Floating Badges (Decorative) */
     .floating-badge {
       position: absolute;
       width: 50px; height: 50px;
@@ -386,7 +376,6 @@
       50% { transform: translateY(-10px); }
     }
 
-    /* Content Typography */
     .about-subtitle {
       color: var(--accent);
       font-weight: 600;
@@ -413,36 +402,27 @@
       font-weight: 600;
     }
 
-    
-    /* Buttons */
     .about-btns {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
     }
 
-    /* Responsive Design */
     @media (max-width: 900px) {
       .about-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
       }
-      .about-img-wrapper { order: -1; } /* Image on top for mobile */
-      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1rem; }
-      .stat-number { font-size: 1.5rem; }
-      .stat-label { font-size: 0.75rem; }
+      .about-img-wrapper { order: -1; }
     }
     @media (max-width: 480px) {
-      .stats-grid { grid-template-columns: 1fr; } /* Stack stats on very small screens */
       .about-btns { flex-direction: column; }
       .btn { width: 100%; justify-content: center; }
     }
 
-     /* ================= SKILLS SECTION PRO STYLES ================= */
-    
-    /* Section & Category Layout */
+    /* ================= SKILLS SECTION ================= */
     #skills { padding-bottom: 6rem; }
-    .skill-category { margin-bottom: 4.5rem; } /* Spacing fix */
+    .skill-category { margin-bottom: 4.5rem; }
     
     .skill-category-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -466,14 +446,12 @@
       text-transform: uppercase;
     }
 
-    /* Grid System */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 1.5rem;
     }
 
-    /* Card Design */
     .skill-card {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(10px);
@@ -486,7 +464,6 @@
       cursor: default;
     }
     
-    /* Hover Effects */
     .skill-card:hover {
       transform: translateY(-8px) scale(1.02);
       background: rgba(255, 255, 255, 0.07);
@@ -495,7 +472,6 @@
       z-index: 2;
     }
 
-    /* AI Section Highlight Style */
     .highlight-grid { gap: 2rem; }
     .highlight-card {
       border: 1px solid rgba(6, 182, 212, 0.3);
@@ -506,7 +482,6 @@
       box-shadow: 0 15px 35px rgba(6, 182, 212, 0.25);
     }
 
-    /* Icons & Text Alignment */
     .skill-card i {
       font-size: 2.8rem;
       margin-bottom: 1rem;
@@ -515,7 +490,6 @@
     }
     .skill-card:hover i { transform: scale(1.15); }
     
-    /* Fix DevIcon Text (removes "HTML5" text next to icon) */
     .devicon[class*="colored"]::before { display: none !important; }
     .devicon[class*="colored"] { background: none; }
     
@@ -527,7 +501,6 @@
       margin-bottom: 0.8rem;
     }
 
-    /* Tooltip Implementation (CSS Only) */
     .skill-card[data-tooltip]::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -552,7 +525,6 @@
       transform: translateX(-50%) translateY(-8px);
     }
 
-    /* Skill Level Dots */
     .skill-level {
       display: flex;
       justify-content: center;
@@ -562,22 +534,25 @@
     .level-dot {
       width: 8px; height: 8px;
       border-radius: 50%;
-      background: #4f46e5; /* Primary Blue/Purple */
+      background: #4f46e5;
     }
     .level-dot.empty { background: rgba(255,255,255,0.15); }
     
-    /* AI Section Dot Color */
-    .highlight-card .level-dot { background: #06b6d4; /* Cyan */ }
+    .highlight-card .level-dot { background: #06b6d4; }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .skill-category { margin-bottom: 3rem; }
       .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .skill-card i { font-size: 2.2rem; }
     }
+
     /* ================= PROJECTS ================= */
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+    .projects-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+      gap: 2.5rem; 
+    }
     .project-card {
       background: var(--glass); backdrop-filter: blur(10px);
       border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,0.08);
@@ -641,6 +616,23 @@
     .fade-in.visible { opacity: 1; transform: translateY(0); }
     .stagger { transition-delay: calc(var(--i) * 0.1s); }
 
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    
+    /* Toast Notification */
+    .toast {
+      position: fixed; bottom: 2rem; right: 2rem;
+      padding: 1rem 1.5rem; border-radius: 12px;
+      background: var(--surface); color: var(--text);
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--shadow); z-index: 9999;
+      transform: translateX(150%); transition: transform 0.3s ease;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .toast.show { transform: translateX(0); }
+    .toast.success { border-color: #22c55e; }
+    .toast.error { border-color: #ef4444; }
+    .toast i { font-size: 1.2rem; }
+
     /* ================= RESPONSIVE ================= */
     @media (max-width: 900px) {
       #about .about-grid, .contact-wrapper { grid-template-columns: 1fr; gap: 3rem; }
@@ -656,49 +648,12 @@
       }
       .nav-links.active { right: 0; }
       .cursor { display: none !important; }
+      .toast { left: 1rem; right: 1rem; bottom: 1rem; justify-content: center; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
       body { cursor: auto; }
     }
-      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-      
-      /* Toast Notification */
-      .toast {
-        position: fixed; bottom: 2rem; right: 2rem;
-        padding: 1rem 1.5rem; border-radius: 12px;
-        background: var(--surface); color: var(--text);
-        border-left: 4px solid var(--primary);
-        box-shadow: var(--shadow); z-index: 9999;
-        transform: translateX(150%); transition: transform 0.3s ease;
-        display: flex; align-items: center; gap: 0.8rem;
-      }
-      .toast.show { transform: translateX(0); }
-      .toast.success { border-color: #22c55e; }
-      .toast.error { border-color: #ef4444; }
-      .toast i { font-size: 1.2rem; }
-      
-      /* Input Focus Glow */
-      .contact-form input:focus, .contact-form textarea:focus {
-        outline: none; border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-      }
-      
-      /* Button Hover & Loading */
-      #submitBtn:hover { transform: translateY(-2px); }
-      #submitBtn:active { transform: translateY(0); }
-      #submitBtn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-      
-      /* Copy Icon Hover */
-      #copyIcon:hover { color: var(--accent); transform: scale(1.1); }
-      
-      /* Social Links Active State */
-      .social-links a:hover { background: var(--primary); color: white; transform: translateY(-4px); }
-      
-      @media (max-width: 768px) {
-        .toast { left: 1rem; right: 1rem; bottom: 1rem; justify-content: center; }
-      }
-      
   </style>
 </head>
 <body>
@@ -709,7 +664,7 @@
 
   <header>
     <nav class="container">
-      <a href="#" class="logo">PORT<span>FOLIO...</span></a>
+      <a href="#" class="logo">AMAN<span>.DEV</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#hero" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -722,54 +677,44 @@
   </header>
 
   <main>
-   
-        <!-- HERO SECTION -->
+    <!-- HERO SECTION -->
     <section id="hero">
-      <!-- Background Glow Effect -->
       <div class="hero-glow"></div>
       <div class="hero-glow-2"></div>
       
-      <!-- Floating Background Elements -->
       <div class="floating-shape shape-1"><i class="fab fa-react"></i></div>
-      <div class="floating-shape shape-2"><i class="fab fa-js"></i></div>
-      <div class="floating-shape shape-3"><i class="fab fa-python"></i></div>
+      <div class="floating-shape shape-2"><i class="fab fa-python"></i></div>
+      <div class="floating-shape shape-3"><i class="fas fa-brain"></i></div>
 
       <div class="container hero-container">
-        <!-- Left: Text Content -->
         <div class="hero-content fade-in">
           <p class="hero-greeting">👋 Hello, I'm</p>
           <h1 class="hero-name">Aman Tariq</h1>
           
-          <!-- Dynamic Typing Text -->
           <h2 class="hero-title">
-            I build <span class="typing-text"></span><span class="cursor">|</span>
+            I build <span class="typing-text"></span><span class="typing-cursor">|</span>
           </h2>
           
           <p class="hero-desc">
-            Software Engineering Student & AI Enthusiast based in Muzaffarabad. 
-            I craft scalable web applications, intuitive user interfaces, and intelligent AI solutions.
+            BS Software Engineering Student (CGPA 3.64) & Full-Stack Developer specializing in 
+            <strong>AI/ML, RAG Systems, and Modern Web Applications</strong>. Based in Muzaffarabad, AJK.
           </p>
           
           <div class="hero-btns">
-            <a href="#projects" class="btn hover-trigger"><i class="fas fa-rocket"></i> View My Work</a>
-            <a href="#contact" class="btn btn-outline hover-trigger"><i class="fas fa-paper-plane"></i> Let's Talk</a>
+            <a href="#projects" class="btn hover-trigger"><i class="fas fa-rocket"></i> View Projects</a>
+            <a href="#contact" class="btn btn-outline hover-trigger"><i class="fas fa-paper-plane"></i> Contact Me</a>
           </div>
           
-          <!-- Social Links in Hero
           <div class="hero-socials">
             <a href="https://github.com/AmanTariq1" target="_blank" class="hover-trigger"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/aman-tariq-4a661537a/" target="_blank" class="hover-trigger"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/aman-tariq" target="_blank" class="hover-trigger"><i class="fab fa-linkedin-in"></i></a>
             <a href="mailto:amantariqa344@gmail.com" class="hover-trigger"><i class="fas fa-envelope"></i></a>
-          </div> -->
+          </div>
         </div>
 
-        <!-- Right: Hero Image / Avatar -->
         <div class="hero-image fade-in">
           <div class="image-wrapper">
-            <!-- Replace src with your actual photo -->
             <img src="https://placehold.co/500x500/1e293b/6366f1?text=Aman+Tariq" alt="Aman Tariq" class="profile-img">
-            <div class="img-glow"></div>
-            <!-- Decorative Ring -->
             <div class="orbit-ring"></div>
           </div>
         </div>
@@ -782,42 +727,32 @@
         <h2 class="section-title fade-in">About Me</h2>
         
         <div class="about-grid">
-          
-          <!-- Left: Image with Hover Effect -->
           <div class="about-img-wrapper fade-in">
             <div class="about-img-container">
               <img src="Profile_img.jfif" alt="Aman Tariq Profile" class="about-img">
-              <div class="img-overlay"></div>
             </div>
-            <!-- Decorative Elements -->
             <div class="floating-badge badge-1"><i class="fas fa-code"></i></div>
             <div class="floating-badge badge-2"><i class="fas fa-robot"></i></div>
           </div>
 
-          <!-- Right: Content & Stats -->
           <div class="about-content fade-in">
+            <p class="about-subtitle">Software Engineering Student | Full-Stack & AI Developer</p>
             
-            <!-- Sub-headline -->
-            <p class="about-subtitle">Software Engineering Student | AI & Web Dev Enthusiast</p>
-            
-            <h3>Crafting Digital Experiences with Code & Creativity</h3>
+            <h3>Bridging Web Development with Artificial Intelligence</h3>
             
             <p class="about-text">
-              I’m Aman Tariq, a developer who blends technical precision with creative intuition. Currently in my 6th semester of Software Engineering, I specialize in building scalable web applications and exploring the power of <strong>LLMs and RAG</strong> to create smarter, user-centric solutions.
+              I am currently in my <strong>7th Semester</strong> of BS Software Engineering at the University of Azad Jammu and Kashmir. With a strong foundation in <strong>Data Structures, OOP, and Database Systems</strong>, I blend technical precision with creative problem-solving.
             </p>
             
             <p class="about-text">
-              My journey involves collaborating with creative minds to turn complex ideas into seamless digital products. Whether it’s a full-stack e-commerce system or an AI-powered chatbot, I focus on clean architecture and pixel-perfect UIs.
+              My professional journey includes a <strong>Web Development Internship at AJK IT Board (2025)</strong> and certified training in AI/ML Engineering. I specialize in building scalable web apps using React/Node.js and exploring advanced AI concepts like <strong>LLMs, RAG, and Computer Vision</strong>.
             </p>
 
-
-            <!-- Action Buttons -->
-          <div class="about-btns">
-  <a href="path/to/your-resume.pdf" download class="btn hover-trigger">
-    <i class="fas fa-download"></i> Download Resume
-  </a>
-</div>
-
+            <div class="about-btns">
+              <a href="resume.pdf" download class="btn hover-trigger">
+                <i class="fas fa-download"></i> Download Resume
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -826,213 +761,159 @@
     <!-- SKILLS SECTION -->
     <section id="skills">
       <div class="container">
-        <h2 class="section-title fade-in">Tech Stack</h2>
+        <h2 class="section-title fade-in">Technical Skills</h2>
         
-        <!-- Frontend Category -->
+        <!-- Frontend & Web Category -->
         <div class="skill-category fade-in">
-          <h3 class="skill-category-title">🎨 Frontend Development</h3>
+          <h3 class="skill-category-title">💻 Web Development</h3>
           <div class="skills-grid">
-            
-            <!-- HTML5 (Fixed: Removed text from inside icon tag) -->
-            <div class="skill-card" data-tooltip="Semantic HTML, ARIA, SEO">
-              <i class="devicon-html5-plain colored"></i>
-              <p>HTML5</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span>
-              </div>
-            </div>
-
-            <!-- CSS3 -->
-            <div class="skill-card" data-tooltip="Tailwind CSS, Flexbox, Grid, Animations">
-              <i class="devicon-css3-plain colored"></i>
-              <p>CSS3/Tailwind</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
-              </div>
-            </div>
-
-            <!-- JavaScript -->
-            <div class="skill-card" data-tooltip="ES6+, Async/Await, DOM Manipulation">
-              <i class="devicon-javascript-plain colored"></i>
-              <p>JavaScript</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
-              </div>
-            </div>
-
-            <!-- React -->
-            <div class="skill-card" data-tooltip="Next.js, Hooks, Context API, Redux">
+            <div class="skill-card" data-tooltip="React.js, Next.js, Responsive Design">
               <i class="devicon-react-original colored"></i>
-              <p>React/Next.js</p>
+              <p>React & Next.js</p>
               <div class="skill-level">
                 <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
               </div>
             </div>
 
-            <!-- Figma -->
-            <div class="skill-card" data-tooltip="Prototyping, Wireframing, UI Design">
-              <i class="devicon-figma-plain colored"></i>
-              <p>Figma</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Backend & Tools Category -->
-        <div class="skill-category fade-in">
-          <h3 class="skill-category-title">⚙️ Backend & Tools</h3>
-          <div class="skills-grid">
-            
-            <!-- Node.js -->
-            <div class="skill-card" data-tooltip="Express.js, Middleware, REST APIs">
+            <div class="skill-card" data-tooltip="Node.js, Express, REST APIs">
               <i class="devicon-nodejs-plain colored"></i>
-              <p>Node.js</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
-              </div>
-            </div>
-
-            <!-- MongoDB -->
-            <div class="skill-card" data-tooltip="Mongoose, Aggregation, Atlas">
-              <i class="devicon-mongodb-plain colored"></i>
-              <p>MongoDB</p>
+              <p>Node.js Backend</p>
               <div class="skill-level">
                 <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span>
               </div>
             </div>
 
-            <!-- Firebase -->
-            <div class="skill-card" data-tooltip="Auth, Firestore, Cloud Functions">
-              <i class="devicon-firebase-plain colored"></i>
-              <p>Firebase</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span>
-              </div>
-            </div>
-
-            <!-- Git -->
-            <div class="skill-card" data-tooltip="Git Flow, GitHub Actions, CI/CD">
-              <i class="devicon-git-plain colored"></i>
-              <p>Git/GitHub</p>
+            <div class="skill-card" data-tooltip="PHP, MySQL, WordPress, WooCommerce">
+              <i class="devicon-php-plain colored"></i>
+              <p>PHP & WordPress</p>
               <div class="skill-level">
                 <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
               </div>
             </div>
 
-            <!-- REST APIs -->
-            <div class="skill-card" data-tooltip="Postman, Swagger, API Security">
-              <i class="fas fa-plug colored" style="color: #06b6d4;"></i> <!-- FontAwesome fallback -->
-              <p>REST APIs</p>
+            <div class="skill-card" data-tooltip="HTML5, CSS3, Tailwind, Bootstrap">
+              <i class="devicon-html5-plain colored"></i>
+              <p>Frontend Core</p>
               <div class="skill-level">
                 <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
               </div>
             </div>
-
           </div>
         </div>
 
-        <!-- AI & Specialization Category -->
+        <!-- AI & ML Category -->
         <div class="skill-category fade-in">
           <h3 class="skill-category-title highlight-title">
-            🤖 AI & Specialization 
-            <span class="badge">Featured</span>
+            🤖 AI & Machine Learning 
+            <span class="badge">Specialization</span>
           </h3>
           <div class="skills-grid highlight-grid">
-            
-            <!-- AI Integration -->
-            <div class="skill-card highlight-card" data-tooltip="OpenAI API, Prompt Engineering, RAG">
+            <div class="skill-card highlight-card" data-tooltip="RAG, Vector DBs, Document QA">
+              <i class="fas fa-database colored" style="color: #06b6d4;"></i>
+              <p>RAG Systems</p>
+              <div class="skill-level">
+                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
+              </div>
+            </div>
+
+            <div class="skill-card highlight-card" data-tooltip="Groq API, LLMs, Prompt Engineering">
               <i class="fas fa-brain colored" style="color: #a78bfa;"></i>
-              <p>AI Integration</p>
+              <p>LLMs & GenAI</p>
               <div class="skill-level">
                 <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span>
               </div>
             </div>
 
-            <!-- Chatbot -->
-            <div class="skill-card highlight-card" data-tooltip="Context Memory, Streaming Responses">
-              <i class="fas fa-robot colored" style="color: #06b6d4;"></i>
-              <p>Chatbot Dev</p>
+            <div class="skill-card highlight-card" data-tooltip="Python, Streamlit, NLP">
+              <i class="devicon-python-plain colored"></i>
+              <p>Python & NLP</p>
               <div class="skill-level">
                 <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
               </div>
             </div>
 
-            <!-- Real-time Systems -->
-            <div class="skill-card" data-tooltip="WebSockets, Socket.io, Live Sync">
-              <i class="fas fa-bolt colored" style="color: #f59e0b;"></i>
-              <p>Real-time Systems</p>
+            <div class="skill-card highlight-card" data-tooltip="Neural Networks, Deep Learning, CV">
+              <i class="fas fa-eye colored" style="color: #10b981;"></i>
+              <p>Computer Vision</p>
               <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span>
+                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot empty"></span><span class="level-dot empty"></span>
               </div>
             </div>
-
-            <!-- Auth Systems -->
-            <div class="skill-card" data-tooltip="JWT, OAuth, Role-Based Access">
-              <i class="fas fa-shield-alt colored" style="color: #10b981;"></i>
-              <p>Auth Systems</p>
-              <div class="skill-level">
-                <span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span><span class="level-dot"></span>
-              </div>
-            </div>
-
           </div>
         </div>
 
+        <!-- Tools & Others -->
+        <div class="skill-category fade-in">
+          <h3 class="skill-category-title">🛠️ Tools & Databases</h3>
+          <div class="skills-grid">
+            <div class="skill-card" data-tooltip="Git, GitHub, CI/CD">
+              <i class="devicon-git-plain colored"></i>
+              <p>Git & GitHub</p>
+            </div>
+            <div class="skill-card" data-tooltip="MySQL, MSSQL, Database Design">
+              <i class="devicon-mysql-plain colored"></i>
+              <p>SQL Databases</p>
+            </div>
+            <div class="skill-card" data-tooltip="Figma, Adobe Photoshop, Illustrator">
+              <i class="devicon-figma-plain colored"></i>
+              <p>UI/UX Design</p>
+            </div>
+            <div class="skill-card" data-tooltip="C, C++, Java, OOP Concepts">
+              <i class="devicon-cplusplus-plain colored"></i>
+              <p>C++ / Java</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-      <section id="projects">
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
       <div class="container">
-        <h2 class="section-title fade-in">Featured Work</h2>
+        <h2 class="section-title fade-in">Featured Projects</h2>
         <div class="projects-grid fade-in">
           
-          <!-- Project 1: E-Commerce -->
+          <!-- Project 1: RAG Assistant -->
           <div class="project-card stagger" style="--i:1" data-tilt>
-            <div class="project-img"><i class="fas fa-store fa-3x"></i></div>
+            <div class="project-img"><i class="fas fa-file-alt fa-3x"></i></div>
             <div class="project-info">
-              <h3>Full-Stack E-Commerce System</h3>
-              <p>Developed a scalable online store with advanced product search, dynamic cart/checkout, and secure order management.</p>
+              <h3>General AI Assistant (RAG)</h3>
+              <p>An AI-powered conversational assistant that handles document-based Q&A using Retrieval-Augmented Generation. Supports PDF/Word uploads, vector embeddings, and automatic mode switching.</p>
               <div class="project-tech">
-                <span class="tech-tag">Next.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Python</span><span class="tech-tag">LLMs</span><span class="tech-tag">Vector DB</span><span class="tech-tag">NLP</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                <a href="https://github.com/AmanTariq1" target="_blank"><i class="fab fa-github"></i> Source Code</a>
               </div>
             </div>
           </div>
 
-          <!-- Project 2: AI Chatbot -->
+          <!-- Project 2: Humorous Chatbot -->
           <div class="project-card stagger" style="--i:2" data-tilt>
-            <div class="project-img"><i class="fas fa-robot fa-3x"></i></div>
+            <div class="project-img"><i class="fas fa-laugh-beam fa-3x"></i></div>
             <div class="project-info">
-              <h3>AI-Powered Smart Assistant</h3>
-              <p>Built an intelligent conversational AI with context retention, real-time streaming, and a clean, responsive chat UI.</p>
+              <h3>AI Humorous Chatbot</h3>
+              <p>A interactive chatbot designed to give humorous responses using the Groq API. Built with Streamlit for a fast and responsive web interface.</p>
               <div class="project-tech">
-                <span class="tech-tag">React</span><span class="tech-tag">OpenAI API</span><span class="tech-tag">WebSocket</span>
+                <span class="tech-tag">Python</span><span class="tech-tag">Groq API</span><span class="tech-tag">Streamlit</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                <a href="https://github.com/AmanTariq1" target="_blank"><i class="fab fa-github"></i> Source Code</a>
               </div>
             </div>
           </div>
 
-          <!-- Project 3: Auth System -->
+          <!-- Project 3: Web Apps -->
           <div class="project-card stagger" style="--i:3" data-tilt>
-            <div class="project-img"><i class="fas fa-shield-alt fa-3x"></i></div>
+            <div class="project-img"><i class="fas fa-laptop-code fa-3x"></i></div>
             <div class="project-info">
-              <h3>Secure Auth & User Management</h3>
-              <p>Implemented enterprise-grade authentication with JWT/Firebase, role-based access control, and protected routing.</p>
+              <h3>Responsive Web Applications</h3>
+              <p>Developed various portfolio sites, business landing pages, and WooCommerce e-commerce stores with customized themes and API integrations.</p>
               <div class="project-tech">
-                <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">JWT</span>
+                <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">WordPress</span><span class="tech-tag">MySQL</span>
               </div>
               <div class="project-links">
-                <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                <a href="#" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                <a href="https://github.com/AmanTariq1" target="_blank"><i class="fab fa-github"></i> View Repos</a>
               </div>
             </div>
           </div>
@@ -1040,7 +921,6 @@
         </div>
       </div>
     </section>
-   
 
     <!-- CONTACT SECTION -->
     <section id="contact">
@@ -1048,46 +928,42 @@
         <h2 class="section-title fade-in">Get In Touch</h2>
         <div class="contact-wrapper fade-in">
           
-          <!-- Contact Info -->
           <div class="contact-info">
-            <h3>Let's Build Something Amazing</h3>
-            <p>Have a project in mind or just want to connect? I'm always open to new opportunities, collaborations, or just a friendly chat about tech.</p>
+            <h3>Let's Collaborate</h3>
+            <p>I am seeking an internship or entry-level role to apply my skills in Full-Stack Development and AI. Let's build something amazing together.</p>
             
-            <!-- Availability Badge -->
             <div style="display: flex; align-items: center; gap: 0.5rem; margin: 1.5rem 0; padding: 0.8rem; background: rgba(6,182,212,0.1); border-radius: 12px; border: 1px solid rgba(6,182,212,0.3);">
               <span style="width: 10px; height: 10px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite;"></span>
-              <span style="font-size: 0.95rem; color: var(--text);">Available for Freelance & Collaboration</span>
+              <span style="font-size: 0.95rem; color: var(--text);">Open for Opportunities</span>
             </div>
             
-            <!-- Email with Copy Feature -->
             <p style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;" onclick="copyEmail()" title="Click to copy email">
               <i class="fas fa-envelope" style="color:var(--accent)"></i>
               <span id="emailText">amantariqa344@gmail.com</span>
               <i class="fas fa-copy" style="font-size: 0.8rem; color: var(--text-muted); transition: var(--transition);" id="copyIcon"></i>
             </p>
             
-            <p><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i> Remote / Worldwide</p>
+            <p><i class="fas fa-map-marker-alt" style="color:var(--accent)"></i> Muzaffarabad, AJK, Pakistan</p>
+            <p><i class="fas fa-phone" style="color:var(--accent)"></i> +92-314-1714764</p>
             
-            <!-- Active Social Links -->
-<div class="social-links">
-  <a href="https://github.com/AmanTariq1" target="_blank" aria-label="GitHub" class="hover-trigger">
-    <i class="fab fa-github"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/aman-tariq-4a661537a/" target="_blank" aria-label="LinkedIn" class="hover-trigger">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="mailto:amantariqa344@gmail.com" aria-label="Email" class="hover-trigger">
-    <i class="fas fa-envelope"></i>
-  </a>
-</div>
+            <div class="social-links">
+              <a href="https://github.com/AmanTariq1" target="_blank" aria-label="GitHub" class="hover-trigger">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/aman-tariq" target="_blank" aria-label="LinkedIn" class="hover-trigger">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:amantariqa344@gmail.com" aria-label="Email" class="hover-trigger">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
           </div>
           
-          <!-- Contact Form -->
           <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
             <input type="text" name="name" placeholder="Your Name *" required aria-label="Your Name">
             <input type="email" name="email" placeholder="Your Email *" required aria-label="Your Email">
             <input type="text" name="subject" placeholder="Subject (Optional)" aria-label="Subject">
-            <textarea name="message" placeholder="Tell me about your project or just say hi! *" required aria-label="Your Message"></textarea>
+            <textarea name="message" placeholder="Tell me about your project or opportunity *" required aria-label="Your Message"></textarea>
             <button type="submit" class="btn hover-trigger" id="submitBtn">
               <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
               <span id="btnLoading" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
@@ -1097,163 +973,144 @@
       </div>
     </section>
 
-    <!-- Toast Notification Container -->
     <div id="toast" class="toast" role="alert" aria-live="polite"></div>
-
-    <!-- CSS Animations -->
-    
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Aman Tariq Crafted with <i class="fas fa-heart" style="color:var(--primary)"></i> & Code</p>
+    <p>&copy; <span id="year"></span> Aman Tariq. Crafted with <i class="fas fa-heart" style="color:var(--primary)"></i> & Code</p>
   </footer>
 
   <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
 
   <script>
-      // ================= TYPEWRITER EFFECT =================
-      document.addEventListener('DOMContentLoaded', function() {
-        const textElement = document.querySelector('.typing-text');
-        
-        // Yahan wo words likhein jo change hona hain
-        const words = [
-          'Scalable Web Apps', 
-          'AI-Powered Solutions', 
-          'Modern Digital Experiences',
-          'Full-Stack Systems'
-        ];
-        
-        let wordIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 100; 
+    // ================= TYPEWRITER EFFECT =================
+    document.addEventListener('DOMContentLoaded', function() {
+      const textElement = document.querySelector('.typing-text');
+      const words = [
+        'Scalable Web Apps', 
+        'AI-Powered Solutions', 
+        'RAG Systems',
+        'Full-Stack Projects'
+      ];
+      
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typeSpeed = 100; 
 
-        function typeEffect() {
-          const currentWord = words[wordIndex];
-          
-          if (isDeleting) {
-            
-            textElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 50; 
-          } else {
-           
-            textElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 100; 
-          }
-
+      function typeEffect() {
+        const currentWord = words[wordIndex];
         
-          if (!isDeleting && charIndex === currentWord.length) {
-           
-            isDeleting = true;
-            typeSpeed = 2000; // 2 seconds ka pause
-          } 
-          
-          else if (isDeleting && charIndex === 0) {
-            
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length; 
-            typeSpeed = 500;
-          }
-
-          setTimeout(typeEffect, typeSpeed);
+        if (isDeleting) {
+          textElement.textContent = currentWord.substring(0, charIndex - 1);
+          charIndex--;
+          typeSpeed = 50; 
+        } else {
+          textElement.textContent = currentWord.substring(0, charIndex + 1);
+          charIndex++;
+          typeSpeed = 100; 
         }
 
+        if (!isDeleting && charIndex === currentWord.length) {
+          isDeleting = true;
+          typeSpeed = 2000;
+        } 
         
-        typeEffect();
-      });
+        else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length; 
+          typeSpeed = 500;
+        }
 
-      // ================= BAKI SCRIPTS (Menu, Scroll, etc.) =================
-      // Yahan aap apni baaki scripts rakh sakte hain...
-    // Custom Cursor
+        setTimeout(typeEffect, typeSpeed);
+      }
+
+      typeEffect();
+    });
+
+    // ================= CUSTOM CURSOR =================
     const cursor = document.getElementById('cursor');
     if (window.matchMedia("(pointer: fine)").matches) {
-      document.addEventListener('mousemove', e => cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`);
+      document.addEventListener('mousemove', e => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
       document.querySelectorAll('a, button, .skill-card, .project-card, input, textarea').forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
       });
     }
 
-    // Mobile Menu
+    // ================= MOBILE MENU =================
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
     menuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
-    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
 
-    // Scroll Progress Bar
+    // ================= SCROLL PROGRESS BAR =================
     window.addEventListener('scroll', () => {
       const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
       document.getElementById('progressBar').style.width = `${scrollPercent}%`;
     });
 
-    // Active Nav Highlight
+    // ================= ACTIVE NAV HIGHLIGHT =================
     const sections = document.querySelectorAll('section');
     window.addEventListener('scroll', () => {
       let current = '';
-      sections.forEach(sec => { if (window.scrollY >= sec.offsetTop - 150) current = sec.id; });
+      sections.forEach(sec => { 
+        if (window.scrollY >= sec.offsetTop - 150) current = sec.id; 
+      });
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.toggle('active', link.getAttribute('href').includes(current));
       });
     });
 
-    // Fade In on Scroll (Staggered)
+    // ================= FADE IN ON SCROLL =================
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+      entries.forEach(entry => { 
+        if (entry.isIntersecting) entry.target.classList.add('visible'); 
+      });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    // Typing Effect
-    const typingEl = document.getElementById('typing');
-    const words = ['Web Applications', 'User Interfaces', 'Digital Products', 'Scalable Systems'];
-    let wordIdx = 0, charIdx = 0, isDeleting = false;
-    function type() {
-      const current = words[wordIdx];
-      typingEl.textContent = isDeleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
-      let delay = isDeleting ? 50 : 100;
-      if (!isDeleting && charIdx === current.length) { delay = 2000; isDeleting = true; }
-      if (isDeleting && charIdx === 0) { isDeleting = false; wordIdx = (wordIdx + 1) % words.length; delay = 500; }
-      setTimeout(type, delay);
-    }
-    type();
-
-    // 3D Tilt Effect
+    // ================= 3D TILT EFFECT =================
     document.querySelectorAll('[data-tilt]').forEach(card => {
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left, y = e.clientY - rect.top;
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         const xRot = ((y / rect.height) - 0.5) * 10;
         const yRot = ((x / rect.width) - 0.5) * -10;
         card.style.transform = `perspective(800px) rotateX(${xRot}deg) rotateY(${yRot}deg) scale(1.02)`;
       });
-      card.addEventListener('mouseleave', () => { card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) scale(1)'; });
+      card.addEventListener('mouseleave', () => { 
+        card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) scale(1)'; 
+      });
     });
 
-    // Back to Top
+    // ================= BACK TO TOP =================
     const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => backToTop.classList.toggle('show', window.scrollY > 600));
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    // Form Handler
-    document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Message sent! (Connect to Formspree/EmailJS for production)');
-      e.target.reset();
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('show', window.scrollY > 600);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Year
+    // ================= YEAR =================
     document.getElementById('year').textContent = new Date().getFullYear();
-        // ===== TOAST NOTIFICATION SYSTEM =====
+
+    // ================= TOAST NOTIFICATION =================
     function showToast(message, type = 'success') {
       const toast = document.getElementById('toast');
       toast.className = `toast ${type} show`;
       toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i><span>${message}</span>`;
-      
       setTimeout(() => toast.classList.remove('show'), 4000);
     }
 
-    // ===== COPY EMAIL FEATURE =====
+    // ================= COPY EMAIL =================
     function copyEmail() {
       const email = 'amantariqa344@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
@@ -1262,11 +1119,14 @@
         icon.className = 'fas fa-check';
         icon.style.color = '#22c55e';
         showToast('Email copied to clipboard!', 'success');
-        setTimeout(() => { icon.className = original; icon.style.color = ''; }, 2000);
+        setTimeout(() => { 
+          icon.className = original; 
+          icon.style.color = ''; 
+        }, 2000);
       }).catch(() => showToast('Failed to copy email', 'error'));
     }
 
-    // ===== FORM SUBMISSION WITH LOADING STATE =====
+    // ================= FORM SUBMISSION =================
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = document.getElementById('btnText');
@@ -1275,7 +1135,6 @@
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
-      // Show loading state
       submitBtn.disabled = true;
       btnText.style.display = 'none';
       btnLoading.style.display = 'inline';
@@ -1283,7 +1142,6 @@
       const formData = new FormData(contactForm);
       
       try {
-        // Formspree Integration (Replace YOUR_FORMSPREE_ID)
         const response = await fetch(contactForm.action, {
           method: 'POST',
           body: formData,
@@ -1297,7 +1155,6 @@
           throw new Error('Form submission failed');
         }
       } catch (error) {
-        // Fallback: Open mailto if Formspree fails
         const name = formData.get('name');
         const email = formData.get('email');
         const message = formData.get('message');
@@ -1306,14 +1163,13 @@
         window.location.href = `mailto:amantariqa344@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
         showToast('Opening your email client...', 'success');
       } finally {
-        // Reset button state
         submitBtn.disabled = false;
         btnText.style.display = 'inline';
         btnLoading.style.display = 'none';
       }
     });
 
-    // ===== INPUT VALIDATION VISUAL FEEDBACK =====
+    // ================= INPUT VALIDATION =================
     document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(input => {
       input.addEventListener('blur', function() {
         if (this.hasAttribute('required') && !this.value.trim()) {
@@ -1326,33 +1182,8 @@
         if (this.value.trim()) this.style.borderColor = '';
       });
     });
-        // ===== TOOLTIP ENHANCEMENT FOR SKILLS =====
-    document.querySelectorAll('.skill-card[data-tooltip]').forEach(card => {
-      // Custom cursor integration
-      card.addEventListener('mouseenter', () => {
-        document.getElementById('cursor')?.classList.add('hover');
-      });
-      card.addEventListener('mouseleave', () => {
-        document.getElementById('cursor')?.classList.remove('hover');
-      });
-    });
 
-    // ===== SKILL CARD CLICK EFFECT (Optional) =====
-    document.querySelectorAll('.skill-card').forEach(card => {
-      card.addEventListener('click', function(e) {
-        // Prevent tooltip from triggering on mobile tap
-        if (window.innerWidth < 768) {
-          e.preventDefault();
-          const tooltip = this.getAttribute('data-tooltip');
-          if (tooltip) {
-            showToast(`💡 ${tooltip}`, 'success');
-          }
-        }
-      });
-    });
-    
-
-    // ===== CUSTOM CURSOR FOR HOVERABLE ELEMENTS =====
+    // ================= HOVER TRIGGER FOR CURSOR =================
     document.querySelectorAll('.hover-trigger').forEach(el => {
       el.addEventListener('mouseenter', () => document.getElementById('cursor')?.classList.add('hover'));
       el.addEventListener('mouseleave', () => document.getElementById('cursor')?.classList.remove('hover'));
